@@ -1,0 +1,518 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   About Page
+   ========================================================= */
+
+/* =========================================================
+   ABOUT HERO
+   ========================================================= */
+
+.about-hero {
+  position: relative;
+
+  padding: 105px 0 95px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(179, 143, 78, 0.18),
+      transparent 45%
+    ),
+    #292219;
+
+  color: #f7f0e4;
+
+  text-align: center;
+}
+
+.about-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 25px;
+
+  border: 1px solid rgba(199, 164, 98, 0.22);
+
+  pointer-events: none;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-eyebrow {
+  margin: 0 0 14px;
+
+  color: #a7834d;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.about-hero .about-eyebrow {
+  color: #c9a35c;
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  font-weight: 500;
+}
+
+.about-hero h1::after {
+  content: "✦";
+
+  display: block;
+
+  margin-top: 20px;
+
+  color: #c9a35c;
+
+  font-size: 0.95rem;
+}
+
+.about-hero-text {
+  max-width: 670px;
+
+  margin: 25px auto 0;
+
+  color: #d9cdbb;
+
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.about-story {
+  padding: 100px 0;
+
+  background: #f7f1e6;
+}
+
+.about-story-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 75px;
+}
+
+.about-story-image {
+  position: relative;
+}
+
+.about-story-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -13px;
+
+  border: 1px solid #c9b38e;
+
+  pointer-events: none;
+}
+
+.about-story-image img {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+}
+
+.about-story-content {
+  max-width: 600px;
+}
+
+.about-story-content h2 {
+  margin: 0 0 25px;
+
+  color: #382d22;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.about-story-content p:not(.about-eyebrow) {
+  margin-bottom: 18px;
+
+  color: #6d6051;
+
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-philosophy {
+  padding: 100px 0;
+
+  background: #eee5d6;
+}
+
+.about-section-heading {
+  max-width: 650px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  margin: 0 0 18px;
+
+  color: #392d21;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 500;
+}
+
+.about-section-heading > p:last-child {
+  margin: 0;
+
+  color: #716353;
+
+  font-family: Georgia, serif;
+  line-height: 1.8;
+}
+
+.principles-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.principle-card {
+  padding: 38px 27px;
+
+  border: 1px solid #d3c3aa;
+
+  background: #f8f3ea;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 28px rgba(72, 52, 30, 0.09);
+}
+
+.principle-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 20px;
+
+  border: 1px solid #b99a68;
+
+  border-radius: 50%;
+
+  color: #806034;
+
+  font-size: 1.2rem;
+}
+
+.principle-card h3 {
+  margin: 0 0 13px;
+
+  color: #443426;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.principle-card p {
+  margin: 0;
+
+  color: #756858;
+
+  font-family: Georgia, serif;
+  font-size: 0.87rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROPRIETOR
+   ========================================================= */
+
+.proprietor-section {
+  padding: 110px 0;
+
+  background: #2d261e;
+
+  color: #f4ecdf;
+}
+
+.proprietor-grid {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.proprietor-content {
+  max-width: 650px;
+}
+
+.proprietor-content .about-eyebrow {
+  color: #c9a35c;
+}
+
+.proprietor-content h2 {
+  margin: 0 0 30px;
+
+  color: #f4ecdf;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.proprietor-content p:not(.about-eyebrow):not(.proprietor-signature) {
+  margin-bottom: 18px;
+
+  color: #cfc3b2;
+
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.85;
+}
+
+.proprietor-signature {
+  margin: 30px 0 3px;
+
+  color: #c9a35c;
+
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.proprietor-title {
+  color: #8e8171;
+
+  font-family: Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proprietor-image {
+  position: relative;
+}
+
+.proprietor-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -12px;
+
+  border: 1px solid rgba(201, 163, 92, 0.45);
+
+  pointer-events: none;
+}
+
+.proprietor-image img {
+  display: block;
+
+  width: 100%;
+  height: 470px;
+
+  object-fit: cover;
+
+  filter: sepia(18%);
+}
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.about-closing {
+  padding: 95px 0;
+
+  background: #f5eee2;
+
+  text-align: center;
+}
+
+.about-closing-inner {
+  max-width: 650px;
+
+  margin: 0 auto;
+}
+
+.about-closing-inner > i {
+  margin-bottom: 22px;
+
+  color: #9a7745;
+
+  font-size: 1.6rem;
+}
+
+.about-closing h2 {
+  margin: 0 0 17px;
+
+  color: #3c3023;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 500;
+}
+
+.about-closing p {
+  margin: 0 auto 30px;
+
+  color: #716252;
+
+  font-family: Georgia, serif;
+  line-height: 1.8;
+}
+
+.about-button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 25px;
+
+  border: 1px solid #6e522e;
+
+  background: #6e522e;
+  color: #f8f1e5;
+
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-button:hover {
+  background: #4f3a20;
+  color: #fffaf0;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .about-story-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-story-content {
+    max-width: none;
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .proprietor-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .proprietor-content {
+    max-width: none;
+  }
+
+  .proprietor-image {
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 75px 0 70px;
+  }
+
+  .about-hero::before {
+    inset: 15px;
+  }
+
+  .about-story,
+  .about-philosophy,
+  .proprietor-section {
+    padding: 70px 0;
+  }
+
+  .about-story-image img {
+    height: 350px;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-card {
+    padding: 32px 25px;
+  }
+
+  .proprietor-image img {
+    height: 390px;
+  }
+
+  .about-closing {
+    padding: 70px 20px;
+  }
+}

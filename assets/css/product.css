@@ -1,0 +1,490 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   Product Page
+   ========================================================= */
+
+/* =========================================================
+   PRODUCT PAGE
+   ========================================================= */
+
+.product-page {
+  padding: 45px 0 100px;
+
+  background: #f7f1e6;
+}
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.product-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 45px;
+
+  color: #897b69;
+
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+}
+
+.product-breadcrumb a {
+  color: #70552f;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.product-breadcrumb a:hover {
+  color: #382818;
+}
+
+.product-breadcrumb i {
+  color: #b4a38c;
+  font-size: 0.65rem;
+}
+
+.product-breadcrumb span {
+  color: #766858;
+}
+
+/* =========================================================
+   PRODUCT LAYOUT
+   ========================================================= */
+
+.product-detail {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.9fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.product-detail-image {
+  position: relative;
+}
+
+.product-image-frame {
+  position: relative;
+
+  padding: 16px;
+
+  border: 1px solid #c9b38d;
+
+  background: #eee4d3;
+}
+
+.product-image-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid rgba(125, 95, 52, 0.2);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.product-image-frame img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.product-detail-info {
+  max-width: 590px;
+}
+
+.product-detail-category {
+  margin: 0 0 13px;
+
+  color: #987443;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.product-detail-info h1 {
+  margin: 0;
+
+  color: #34291f;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.product-divider {
+  width: 70px;
+  height: 1px;
+
+  margin: 27px 0;
+
+  background: #a98957;
+}
+
+.product-detail-description {
+  margin: 0 0 25px;
+
+  color: #6d6052;
+
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.product-detail-price {
+  margin-bottom: 17px;
+
+  color: #594021;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.product-detail-price span {
+  color: #837563;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* =========================================================
+   STOCK
+   ========================================================= */
+
+.product-stock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  color: #5f644b;
+
+  font-family: Georgia, serif;
+  font-size: 0.83rem;
+}
+
+.product-stock i {
+  font-size: 0.55rem;
+}
+
+/* =========================================================
+   QUANTITY
+   ========================================================= */
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 17px;
+}
+
+.quantity-section label {
+  color: #554838;
+
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+}
+
+.quantity-control {
+  display: flex;
+
+  width: 125px;
+
+  border: 1px solid #cdbda5;
+
+  background: #fffdf8;
+}
+
+.quantity-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 42px;
+
+  border: 0;
+
+  background: transparent;
+  color: #665137;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.quantity-button:hover {
+  background: #eee4d4;
+}
+
+.quantity-button i {
+  font-size: 0.65rem;
+}
+
+.quantity-control input {
+  width: 49px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #3c3024;
+
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+
+  text-align: center;
+
+  outline: none;
+}
+
+/* Remove number input arrows */
+
+.quantity-control input::-webkit-inner-spin-button,
+.quantity-control input::-webkit-outer-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+.quantity-control input {
+  appearance: textfield;
+}
+
+/* =========================================================
+   ADD TO SATCHEL
+   ========================================================= */
+
+.add-to-satchel-large {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 56px;
+
+  border: 1px solid #624822;
+
+  background: #624822;
+  color: #fff9ef;
+
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-to-satchel-large:hover {
+  background: #452f16;
+
+  transform: translateY(-2px);
+}
+
+.add-to-satchel-large i {
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   PRODUCT NOTE
+   ========================================================= */
+
+.product-note {
+  display: flex;
+
+  align-items: center;
+  gap: 9px;
+
+  margin: 17px 0 0;
+
+  color: #8a7c6b;
+
+  font-family: Georgia, serif;
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.product-note i {
+  color: #9a7947;
+}
+
+/* =========================================================
+   DESCRIPTION SECTION
+   ========================================================= */
+
+.product-description-section {
+  padding: 90px 0;
+
+  background: #eee5d6;
+}
+
+.description-inner {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.description-inner h2 {
+  margin: 0 0 22px;
+
+  color: #3c3024;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.description-inner p:last-child {
+  margin: 0;
+
+  color: #716354;
+
+  font-family: Georgia, serif;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   BACK TO SHOP
+   ========================================================= */
+
+.product-back {
+  padding: 35px 0;
+
+  background: #f7f1e6;
+}
+
+.product-back a {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  color: #70552f;
+
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.product-back a:hover {
+  gap: 14px;
+
+  color: #382818;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .product-detail-info {
+    max-width: none;
+  }
+
+  .product-detail-image {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .product-page {
+    padding: 30px 0 70px;
+  }
+
+  .product-breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .product-detail {
+    gap: 40px;
+  }
+
+  .product-image-frame {
+    padding: 10px;
+  }
+
+  .product-detail-info h1 {
+    font-size: 2.6rem;
+  }
+
+  .product-detail-description {
+    font-size: 0.92rem;
+  }
+
+  .product-description-section {
+    padding: 70px 20px;
+  }
+
+  .quantity-section {
+    justify-content: space-between;
+  }
+}
