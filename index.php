@@ -55,9 +55,19 @@ $products = $stmt->fetchAll();
             </a>
 
             <!-- Account -->
-            <a href="account.php" class="header-action" aria-label="My account">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
-            </a>
+<div class="account-links">
+
+    <a href="login.php">
+        Sign In
+    </a>
+
+    <span>·</span>
+
+    <a href="register.php">
+        Register
+    </a>
+
+</div>
 
             <!-- Shopping Bag -->
             <a href="cart.php" class="header-action cart-action" aria-label="Your satchel">
