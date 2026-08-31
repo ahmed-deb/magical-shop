@@ -1,0 +1,612 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   Checkout / Settlement Page
+   ========================================================= */
+
+/* =========================================================
+   CHECKOUT PAGE
+   ========================================================= */
+
+.checkout-page {
+  padding: 80px 0 110px;
+
+  background: #f7f1e6;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.checkout-heading {
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.checkout-eyebrow,
+.summary-eyebrow {
+  margin: 0 0 12px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.checkout-heading h1 {
+  margin: 0 0 17px;
+
+  color: #382c21;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 6vw, 4.3rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.checkout-heading > p:last-child {
+  margin: 0;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ERRORS
+   ========================================================= */
+
+.checkout-errors {
+  max-width: 850px;
+
+  margin: 0 auto 40px;
+
+  padding: 20px 24px;
+
+  border: 1px solid #c8a99c;
+
+  background: #f1e3dd;
+
+  color: #633f35;
+
+  font-family: Georgia, serif;
+}
+
+.checkout-errors-title {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  font-weight: 700;
+}
+
+.checkout-errors ul {
+  margin: 5px 0 0;
+  padding-left: 27px;
+}
+
+.checkout-errors li {
+  margin-bottom: 4px;
+
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   CHECKOUT LAYOUT
+   ========================================================= */
+
+.checkout-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  align-items: start;
+
+  gap: 55px;
+}
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.checkout-form-wrapper {
+  padding: 42px;
+
+  border: 1px solid #d0c0a6;
+
+  background: #eee5d6;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.checkout-section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 17px;
+
+  margin-bottom: 32px;
+}
+
+.section-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid #b99b6b;
+
+  color: #76572f;
+
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+}
+
+.checkout-section-heading p {
+  margin: 0 0 4px;
+
+  color: #987443;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.checkout-section-heading h2 {
+  margin: 0;
+
+  color: #3e3124;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.payment-heading {
+  margin-top: 55px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.checkout-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group label {
+  color: #55483a;
+
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #cbbba2;
+
+  border-radius: 0;
+
+  background: #fffdf8;
+
+  color: #403328;
+
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  min-height: 48px;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  line-height: 1.7;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa092;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #987443;
+
+  box-shadow: 0 0 0 2px rgba(152, 116, 67, 0.1);
+}
+
+.form-group small {
+  color: #8b7c6b;
+
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+/* =========================================================
+   PAYMENT NOTICE
+   ========================================================= */
+
+.payment-notice {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  border: 1px solid #cdbb9e;
+
+  background: #f7f1e6;
+}
+
+.payment-notice > i {
+  margin-top: 3px;
+
+  color: #94703d;
+}
+
+.payment-notice strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #493821;
+
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+}
+
+.payment-notice p {
+  margin: 0;
+
+  color: #817363;
+
+  font-family: Georgia, serif;
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PLACE ORDER
+   ========================================================= */
+
+.place-order-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 56px;
+
+  margin-top: 8px;
+
+  border: 1px solid #624822;
+
+  background: #624822;
+  color: #fffaf1;
+
+  font-family: Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.place-order-button:hover {
+  background: #432e15;
+
+  transform: translateY(-2px);
+}
+
+.place-order-button i {
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   SECURITY NOTE
+   ========================================================= */
+
+.checkout-security {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 0;
+
+  color: #8b7c6b;
+
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-style: italic;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ORDER SUMMARY
+   ========================================================= */
+
+.checkout-summary {
+  position: sticky;
+  top: 30px;
+
+  padding: 35px 30px;
+
+  border: 1px solid #cdbb9d;
+
+  background: #eee5d6;
+}
+
+.checkout-summary h2 {
+  margin: 0 0 28px;
+
+  color: #3c3024;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   SUMMARY PRODUCTS
+   ========================================================= */
+
+.summary-products {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.summary-product {
+  display: grid;
+
+  grid-template-columns:
+    58px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.summary-product-image {
+  padding: 4px;
+
+  border: 1px solid #c8b696;
+
+  background: #f7f1e6;
+}
+
+.summary-product-image img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  object-fit: cover;
+}
+
+.summary-product-info {
+  min-width: 0;
+}
+
+.summary-product-info h3 {
+  overflow: hidden;
+
+  margin: 0 0 4px;
+
+  color: #47372a;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summary-product-info p {
+  margin: 0;
+
+  color: #897968;
+
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+}
+
+.summary-product > strong {
+  color: #5a4223;
+
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUMMARY TOTAL
+   ========================================================= */
+
+.summary-divider {
+  height: 1px;
+
+  margin: 28px 0 22px;
+
+  background: #cdbda4;
+}
+
+.summary-total {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #493a2c;
+
+  font-family: Georgia, serif;
+}
+
+.summary-total span {
+  font-size: 0.9rem;
+}
+
+.summary-total strong {
+  color: #593e1e;
+
+  font-size: 1.25rem;
+
+  text-align: right;
+}
+
+.summary-total small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #887765;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+}
+
+/* =========================================================
+   RETURN TO SATCHEL
+   ========================================================= */
+
+.edit-satchel {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: #765a34;
+
+  font-family: Georgia, serif;
+  font-size: 0.77rem;
+
+  text-decoration: none;
+}
+
+.edit-satchel:hover {
+  color: #3f2c17;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+
+    order: -1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .checkout-page {
+    padding: 60px 0 80px;
+  }
+
+  .checkout-heading {
+    margin-bottom: 40px;
+  }
+
+  .checkout-form-wrapper {
+    padding: 28px 20px;
+  }
+
+  .checkout-summary {
+    padding: 28px 22px;
+  }
+
+  .checkout-section-heading h2 {
+    font-size: 1.4rem;
+  }
+
+  .summary-product {
+    grid-template-columns:
+      50px
+      minmax(0, 1fr)
+      auto;
+  }
+}
