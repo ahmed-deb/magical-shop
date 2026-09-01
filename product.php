@@ -23,6 +23,9 @@ if (!$product) {
     http_response_code(404);
     die("Product not found.");
 }
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -189,9 +192,9 @@ if (!$product) {
                     aria-hidden="true"
                 ></i>
 
-                <span class="cart-count">
-                    0
-                </span>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 

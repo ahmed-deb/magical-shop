@@ -5,6 +5,11 @@ require_once __DIR__ . "/includes/db.php";
 // Example: Fetch products to use in your template
 $stmt = $pdo->query("SELECT * FROM products WHERE is_active = 1");
 $products = $stmt->fetchAll();
+$cartCount = 0;
+
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,10 +145,9 @@ $products = $stmt->fetchAll();
                     class="fa-solid fa-bag-shopping"
                     aria-hidden="true"
                 ></i>
-
-                <span class="cart-count">
-                    0
-                </span>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 

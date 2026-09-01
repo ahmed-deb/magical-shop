@@ -87,6 +87,9 @@ if (!empty($_SESSION["cart"])) {
         ];
     }
 }
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -263,10 +266,9 @@ if (!empty($_SESSION["cart"])) {
                     class="fa-solid fa-bag-shopping"
                     aria-hidden="true"
                 ></i>
-
-                <span class="cart-count">
-                    0
-                </span>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 

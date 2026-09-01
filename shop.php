@@ -93,6 +93,9 @@ $productQuery = $pdo->prepare($sql);
 $productQuery->execute($params);
 
 $products = $productQuery->fetchAll(PDO::FETCH_ASSOC);
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -249,9 +252,9 @@ $products = $productQuery->fetchAll(PDO::FETCH_ASSOC);
                     aria-hidden="true"
                 ></i>
 
-                <span class="cart-count">
-                    0
-                </span>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 

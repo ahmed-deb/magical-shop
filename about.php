@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once __DIR__ . "/includes/db.php";
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -165,9 +168,9 @@ require_once __DIR__ . "/includes/db.php";
                     aria-hidden="true"
                 ></i>
 
-                <span class="cart-count">
-                    0
-                </span>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 
