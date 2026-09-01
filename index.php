@@ -32,51 +32,127 @@ $products = $stmt->fetchAll();
 </head>
 <body>
 
-            <header class="site-header">
-        <div class="container">
-            <!-- Logo -->
-            <a href="index.php" class="site-logo">
-            <img src="assets/images/logo.png" alt="Site Logo" width="150" height="48">
+
+<header class="site-header">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <a href="index.php" class="site-logo">
+            <img
+                src="assets/images/logo.png"
+                alt="The Arcane Emporium"
+                width="150"
+                height="48"
+            >
+        </a>
+
+
+        <!-- Navigation -->
+        <nav
+            class="main-nav"
+            aria-label="Main Navigation"
+        >
+
+            <a href="index.php">
+                Home
             </a>
 
-            <!-- Navigation -->
-            <nav class="main-nav" aria-label="Main Navigation">
-            <a href="index.php">Home</a>
-            <a href="shop.php">The Emporium</a>
-            <a href="about.php">Our Establishment</a>
-            <a href="contact.php">Owl Post</a>
-            </nav>
+            <a href="shop.php">
+                The Emporium
+            </a>
 
-            <!-- Header Actions -->
-            <div class="header-actions">
+            <a href="about.php">
+                Our Establishment
+            </a>
+
+            <a href="contact.php">
+                Owl Post
+            </a>
+
+        </nav>
+
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+
+
             <!-- Search -->
-            <a href="search.php" class="header-action" aria-label="Search">
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <a
+                href="search.php"
+                class="header-action"
+                aria-label="Search"
+                title="Search"
+            >
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                ></i>
             </a>
+
 
             <!-- Account -->
-<div class="account-links">
+            <?php if (isset($_SESSION["user_id"])): ?>
 
-    <a href="login.php">
-        Sign In
-    </a>
+                <!-- Logged in -->
+                <a
+                    href="account.php"
+                    class="header-action"
+                    aria-label="My account"
+                    title="My account"
+                >
+                    <i
+                        class="fa-solid fa-user"
+                        aria-hidden="true"
+                    ></i>
+                </a>
 
-    <span>·</span>
+            <?php else: ?>
 
-    <a href="register.php">
-        Register
-    </a>
+                <!-- Not logged in -->
+                <div class="account-links">
 
-</div>
+                    <a href="login.php">
+                        Sign In
+                    </a>
+
+                    <span>·</span>
+
+                    <a href="register.php">
+                        Register
+                    </a>
+
+                </div>
+
+            <?php endif; ?>
+
 
             <!-- Shopping Bag -->
-            <a href="cart.php" class="header-action cart-action" aria-label="Your satchel">
-                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-                <span class="cart-count">0</span>
+            <a
+                href="cart.php"
+                class="header-action cart-action"
+                aria-label="Your satchel"
+                title="Your satchel"
+            >
+
+                <i
+                    class="fa-solid fa-bag-shopping"
+                    aria-hidden="true"
+                ></i>
+
+                <span class="cart-count">
+                    0
+                </span>
+
             </a>
-            </div>
+
         </div>
-        </header>
+
+    </div>
+
+</header>
+
+
     <main>
 
         <!-- Hero -->
