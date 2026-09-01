@@ -1,0 +1,459 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   Contact / Owl Post
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.contact-page {
+  background: #f7f1e6;
+  color: #403328;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.contact-hero {
+  padding: 90px 0 75px;
+
+  border-bottom: 1px solid #d6c6ad;
+
+  text-align: center;
+}
+
+.contact-eyebrow {
+  margin: 0 0 12px;
+
+  color: #987443;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 0 0 20px;
+
+  color: #382c21;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  font-weight: 500;
+}
+
+.contact-hero > .container > p:last-child {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  font-size: 0.92rem;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   CONTACT CONTENT
+   ========================================================= */
+
+.contact-content {
+  padding: 85px 0;
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 90px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 38px;
+
+  padding-top: 10px;
+}
+
+.contact-detail {
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  gap: 20px;
+}
+
+.contact-detail-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #c8b28e;
+
+  color: #76572f;
+
+  font-size: 0.85rem;
+}
+
+.contact-detail h2 {
+  margin: 0 0 10px;
+
+  color: #45372a;
+
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.contact-detail p {
+  margin: 0;
+
+  color: #756858;
+
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+}
+
+.contact-note {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #a08e78;
+
+  font-family: Georgia, serif;
+  font-size: 0.68rem;
+  font-style: italic;
+}
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.contact-form-wrapper {
+  padding: 42px;
+
+  border: 1px solid #cdbb9d;
+
+  background: #eee5d6;
+
+  box-shadow: 0 15px 40px rgba(60, 45, 30, 0.06);
+}
+
+/* =========================================================
+   FORM HEADING
+   ========================================================= */
+
+.form-heading {
+  margin-bottom: 32px;
+}
+
+.form-heading p {
+  margin: 0 0 8px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.form-heading h2 {
+  margin: 0 0 9px;
+
+  color: #3e3024;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-heading span {
+  color: #817363;
+
+  font-family: Georgia, serif;
+  font-size: 0.76rem;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group label {
+  color: #55483a;
+
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cbbba2;
+
+  border-radius: 0;
+
+  background: #fffdf8;
+
+  color: #403328;
+
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  min-height: 48px;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 150px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa092;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #987443;
+
+  box-shadow: 0 0 0 2px rgba(152, 116, 67, 0.1);
+}
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-submit {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 53px;
+
+  margin-top: 3px;
+
+  border: 1px solid #624822;
+
+  background: #624822;
+  color: #fffaf1;
+
+  font-family: Georgia, serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: #432e15;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTNOTE
+   ========================================================= */
+
+.form-footnote {
+  margin: 3px 0 0;
+
+  color: #978674;
+
+  font-family: Georgia, serif;
+  font-size: 0.66rem;
+  font-style: italic;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.contact-location {
+  padding: 70px 0;
+
+  border-top: 1px solid #d6c6ad;
+
+  background: #eee5d6;
+}
+
+.location-inner {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.location-icon {
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid #c8b28e;
+
+  color: #76572f;
+
+  font-size: 1.1rem;
+}
+
+.location-eyebrow {
+  margin: 0 0 6px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.location-inner h2 {
+  margin: 0 0 8px;
+
+  color: #45372a;
+
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.location-inner p:last-child {
+  margin: 0;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  font-size: 0.76rem;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    max-width: 700px;
+  }
+
+  .contact-details {
+    order: 2;
+  }
+
+  .contact-form-wrapper {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 65px 0 55px;
+  }
+
+  .contact-content {
+    padding: 55px 0;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 22px;
+  }
+
+  .form-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .location-inner {
+    align-items: flex-start;
+  }
+}
