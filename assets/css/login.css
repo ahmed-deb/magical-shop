@@ -1,0 +1,334 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   Login Page
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.login-page {
+  min-height: 80vh;
+
+  padding: 85px 0 110px;
+
+  background: #f7f1e6;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.login-card {
+  width: min(100%, 520px);
+
+  margin: 0 auto;
+
+  padding: 48px 50px;
+
+  border: 1px solid #cdbb9d;
+
+  background: #eee5d6;
+
+  box-shadow: 0 15px 45px rgba(60, 45, 30, 0.08);
+}
+
+/* =========================================================
+   EMBLEM
+   ========================================================= */
+
+.login-emblem {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 25px;
+
+  border: 1px solid #b99b6b;
+
+  color: #76572f;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.login-heading {
+  margin-bottom: 35px;
+
+  text-align: center;
+}
+
+.login-eyebrow {
+  margin: 0 0 10px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.login-heading h1 {
+  margin: 0 0 15px;
+
+  color: #382c21;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.login-heading > p:last-child {
+  max-width: 400px;
+
+  margin: 0 auto;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ERRORS
+   ========================================================= */
+
+.login-errors {
+  margin-bottom: 25px;
+
+  padding: 17px 19px;
+
+  border: 1px solid #c8a99c;
+
+  background: #f1e3dd;
+
+  color: #633f35;
+
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+}
+
+.login-errors-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 7px;
+
+  font-weight: 700;
+}
+
+.login-errors ul {
+  margin: 0;
+
+  padding-left: 24px;
+}
+
+.login-errors li {
+  margin: 3px 0;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.login-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group label {
+  color: #55483a;
+
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cbbba2;
+
+  border-radius: 0;
+
+  background: #fffdf8;
+
+  color: #403328;
+
+  font-family: Georgia, serif;
+  font-size: 0.86rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #aaa092;
+}
+
+.form-group input:focus {
+  border-color: #987443;
+
+  box-shadow: 0 0 0 2px rgba(152, 116, 67, 0.1);
+}
+
+/* =========================================================
+   PASSWORD LABEL
+   ========================================================= */
+
+.password-label-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-label-row a {
+  color: #8b6b43;
+
+  font-family: Georgia, serif;
+  font-size: 0.68rem;
+
+  text-decoration: none;
+}
+
+.password-label-row a:hover {
+  color: #4b351b;
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 54px;
+
+  margin-top: 4px;
+
+  border: 1px solid #624822;
+
+  background: #624822;
+  color: #fffaf1;
+
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-button:hover {
+  background: #432e15;
+
+  transform: translateY(-2px);
+}
+
+.login-button i {
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   REGISTER LINK
+   ========================================================= */
+
+.login-register {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 30px;
+  padding-top: 25px;
+
+  border-top: 1px solid #d1c1a8;
+
+  color: #827565;
+
+  font-family: Georgia, serif;
+  font-size: 0.75rem;
+
+  text-align: center;
+}
+
+.login-register a {
+  color: #76572f;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.login-register a:hover {
+  color: #3f2c17;
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 55px 0 75px;
+  }
+
+  .login-card {
+    padding: 38px 24px;
+  }
+
+  .login-heading h1 {
+    font-size: 2.3rem;
+  }
+}
