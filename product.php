@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "includes/db.php";
 
 // Get product ID from URL
@@ -216,7 +216,6 @@ if (!$product) {
                     </div>
 
                 </div>
-
 
                 <!-- Information -->
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once __DIR__ . "/includes/db.php";
 
 // Example: Fetch products to use in your template

@@ -1,5 +1,7 @@
 <?php
-require_once "includes/db.php"; ?>
+session_start();
+require_once __DIR__ . "/includes/db.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
