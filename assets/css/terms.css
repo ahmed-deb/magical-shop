@@ -1,0 +1,296 @@
+/* =========================================================
+   THE ARCANE EMPORIUM
+   Terms of Trade
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.terms-page {
+  background: #f7f1e6;
+  color: #403328;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.terms-hero {
+  padding: 85px 0 70px;
+
+  border-bottom: 1px solid #d6c6ad;
+
+  text-align: center;
+}
+
+.terms-eyebrow {
+  margin: 0 0 12px;
+
+  color: #987443;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.terms-hero h1 {
+  margin: 0 0 18px;
+
+  color: #382c21;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 500;
+}
+
+.terms-hero > .container > p:not(.terms-eyebrow) {
+  max-width: 620px;
+
+  margin: 0 auto 14px;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  font-size: 0.86rem;
+
+  line-height: 1.8;
+}
+
+.terms-date {
+  color: #a08e78;
+
+  font-family: Georgia, serif;
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.terms-content {
+  padding: 80px 0;
+}
+
+.terms-layout {
+  display: grid;
+
+  grid-template-columns: 230px 1fr;
+
+  gap: 70px;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.terms-navigation {
+  position: sticky;
+
+  top: 30px;
+
+  align-self: start;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border-left: 1px solid #cdbb9d;
+}
+
+.terms-navigation p {
+  margin: 0;
+
+  padding: 0 0 14px 18px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.terms-navigation a {
+  padding: 8px 12px 8px 18px;
+
+  color: #786b5b;
+
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.terms-navigation a:hover {
+  padding-left: 22px;
+
+  color: #624822;
+}
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+.terms-document {
+  max-width: 720px;
+}
+
+.terms-document section {
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+
+  border-bottom: 1px solid #ddd0bb;
+}
+
+.terms-document section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ARTICLES
+   ========================================================= */
+
+.article-number {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #987443;
+
+  font-family: Georgia, serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.terms-document h2 {
+  margin: 0 0 18px;
+
+  color: #433428;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.terms-document p {
+  margin: 0 0 16px;
+
+  color: #756858;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.84rem;
+
+  line-height: 1.9;
+}
+
+.terms-document p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.terms-closing {
+  padding: 45px 20px 10px;
+
+  text-align: center;
+}
+
+.terms-closing i {
+  margin-bottom: 18px;
+
+  color: #987443;
+
+  font-size: 1.15rem;
+}
+
+.terms-closing p {
+  max-width: 450px;
+
+  margin: 0 auto 8px;
+
+  color: #8d7c67;
+
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+.terms-closing span {
+  color: #624822;
+
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .terms-content {
+    padding: 60px 0;
+  }
+
+  .terms-layout {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    max-width: 700px;
+  }
+
+  .terms-navigation {
+    position: static;
+
+    border-left: none;
+    border-bottom: 1px solid #cdbb9d;
+
+    padding-bottom: 20px;
+  }
+
+  .terms-navigation a {
+    padding: 6px 0;
+  }
+
+  .terms-navigation a:hover {
+    padding-left: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .terms-hero {
+    padding: 60px 0 50px;
+  }
+
+  .terms-content {
+    padding: 45px 0;
+  }
+
+  .terms-document h2 {
+    font-size: 1.45rem;
+  }
+
+  .terms-document p {
+    font-size: 0.8rem;
+  }
+}
