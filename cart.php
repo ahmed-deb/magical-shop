@@ -87,6 +87,8 @@ if (!empty($_SESSION["cart"])) {
         ];
     }
 }
+$cartCount = 0;
+
 if (!empty($_SESSION["cart"])) {
     $cartCount = array_sum($_SESSION["cart"]);
 }

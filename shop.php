@@ -1,6 +1,27 @@
 <?php
 session_start();
-require_once "includes/db.php";
+
+require_once __DIR__ . "/includes/db.php";
+
+if (!isset($_SESSION["cart"])) {
+    $_SESSION["cart"] = [];
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $productId = (int) $_POST["product_id"];
+    $quantity = (int) $_POST["quantity"];
+
+    if ($productId > 0 && $quantity > 0) {
+        if (isset($_SESSION["cart"][$productId])) {
+            $_SESSION["cart"][$productId] += $quantity;
+        } else {
+            $_SESSION["cart"][$productId] = $quantity;
+        }
+    }
+
+    header("Location: cart.php");
+    exit();
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +114,8 @@ $productQuery = $pdo->prepare($sql);
 $productQuery->execute($params);
 
 $products = $productQuery->fetchAll(PDO::FETCH_ASSOC);
+$cartCount = 0;
+
 if (!empty($_SESSION["cart"])) {
     $cartCount = array_sum($_SESSION["cart"]);
 }
@@ -499,17 +522,30 @@ if (!empty($_SESSION["cart"])) {
                                     </span>
 
 
-                                    <button
-                                        type="button"
-                                        class="add-to-satchel"
-                                        aria-label="Add <?= htmlspecialchars(
-                                            $product["name"],
-                                        ) ?> to satchel"
-                                    >
+<form action="cart.php" method="POST" class="add-to-cart-form">
 
-                                        <i class="fa-solid fa-bag-shopping"></i>
+    <input
+        type="hidden"
+        name="product_id"
+        value="<?= $product["id"] ?>"
+    >
 
-                                    </button>
+    <input
+        type="hidden"
+        name="quantity"
+        value="1"
+    >
+
+    <button
+        type="submit"
+        class="add-to-satchel"
+        aria-label="Add <?= htmlspecialchars($product["name"]) ?> to satchel"
+        title="Add to satchel"
+    >
+        <i class="fa-solid fa-bag-shopping"></i>
+    </button>
+
+</form>
 
 
                                 </div>

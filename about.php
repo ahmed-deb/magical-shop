@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once __DIR__ . "/includes/db.php";
+$cartCount = 0;
+
 if (!empty($_SESSION["cart"])) {
     $cartCount = array_sum($_SESSION["cart"]);
 }

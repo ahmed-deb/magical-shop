@@ -130,7 +130,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+$cartCount = 0;
 
+if (!empty($_SESSION["cart"])) {
+    $cartCount = array_sum($_SESSION["cart"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -189,22 +193,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="container">
 
-        <a
-            href="index.php"
-            class="site-logo"
-        >
-
+        <!-- Logo -->
+        <a href="index.php" class="site-logo">
             <img
                 src="assets/images/logo.png"
                 alt="The Arcane Emporium"
+                width="150"
+                height="48"
             >
-
         </a>
 
 
+        <!-- Navigation -->
         <nav
             class="main-nav"
-            aria-label="Main navigation"
+            aria-label="Main Navigation"
         >
 
             <a href="index.php">
@@ -226,41 +229,76 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </nav>
 
 
+        <!-- Header Actions -->
         <div class="header-actions">
 
+
+            <!-- Search -->
             <a
                 href="search.php"
                 class="header-action"
                 aria-label="Search"
+                title="Search"
             >
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                ></i>
             </a>
 
 
-            <a
-                href="account.php"
-                class="header-action"
-                aria-label="My account"
-            >
-                <i class="fa-solid fa-user"></i>
-            </a>
+            <!-- Account -->
+            <?php if (isset($_SESSION["user_id"])): ?>
+
+                <!-- Logged in -->
+                <a
+                    href="account.php"
+                    class="header-action"
+                    aria-label="My account"
+                    title="My account"
+                >
+                    <i
+                        class="fa-solid fa-user"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+            <?php else: ?>
+
+                <!-- Not logged in -->
+                <div class="account-links">
+
+                    <a href="login.php">
+                        Sign In
+                    </a>
+
+                    <span>·</span>
+
+                    <a href="register.php">
+                        Register
+                    </a>
+
+                </div>
+
+            <?php endif; ?>
 
 
+            <!-- Shopping Bag -->
             <a
                 href="cart.php"
-                class="header-action"
+                class="header-action cart-action"
                 aria-label="Your satchel"
+                title="Your satchel"
             >
 
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i
+                    class="fa-solid fa-bag-shopping"
+                    aria-hidden="true"
+                ></i>
 
-                <?php if (!empty($_SESSION["cart"])): ?>
-
-                    <span class="cart-count">
-                        <?= array_sum($_SESSION["cart"]) ?>
-                    </span>
-
-                <?php endif; ?>
+<span class="cart-count">
+    <?= $cartCount ?>
+</span>
 
             </a>
 
@@ -269,6 +307,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
 </header>
+
 
 
 
